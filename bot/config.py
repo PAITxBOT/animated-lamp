@@ -3,13 +3,13 @@ import os
 
 class Config:
 
-    API_ID = int(os.environ.get("API_ID"))
-    API_HASH = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
-    SESSION_NAME = os.environ.get("SESSION_NAME", ":memory:")
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
-    DATABASE_URL = os.environ.get("DATABASE_URL")
-    AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "").split(" ")]
+    API_ID = int(os.environ.get("API_ID", "22917000"))
+    API_HASH = os.environ.get("API_HASH", "11b81549c2e4c3543806193f590ec0ad")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6884162735:AAFQagYaMGcaUpHsZvaUeJ4h02A86FIKGq8")
+    SESSION_NAME = os.environ.get("SESSION_NAME", "hari")
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002023567286"))
+    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://paid:paid@cluster0.xgucvek.mongodb.net/?retryWrites=true&w=majority")
+    AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "1426588906").split(" ")]
     MAX_PROCESSES_PER_USER = int(os.environ.get("MAX_PROCESSES_PER_USER", 2))
     MAX_TRIM_DURATION = int(os.environ.get("MAX_TRIM_DURATION", 600))
     TRACK_CHANNEL = int(os.environ.get("TRACK_CHANNEL", False))
